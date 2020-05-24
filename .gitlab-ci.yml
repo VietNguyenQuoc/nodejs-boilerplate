@@ -10,6 +10,8 @@ image: node:latest
 
 deploy:
   script:
+    - pwd
+    - whoami
     - git pull origin master
     - pm2 reload ../ecosystem.config.js
 
