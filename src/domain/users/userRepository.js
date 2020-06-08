@@ -1,4 +1,4 @@
-const { User } = require('../../infra/db/sequelize/models');
+const { User, UserCredential } = require('../../infra/db/sequelize/models');
 
 const createUser = async ({ userDto }) => {
   const user = await User.create(userDto);
@@ -16,7 +16,10 @@ const getUserById = async ({ userId }) => {
 }
 
 const getUserByEmail = async ({ email }) => {
-  const user = await User.findOne({ where: { email } });
+  const user = await User.findOne({
+    where: { email },
+    include: UserCredential
+  });
   return user;
 }
 

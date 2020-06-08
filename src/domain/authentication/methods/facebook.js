@@ -10,7 +10,6 @@ router.get('/', async (_req, res) => {
 router.get('/callback', async (req, _res, next) => {
   const userPayload = await authenticationService.facebook.handleCallback(req);
 
-  console.log(userPayload)
   next(userPayload);
 });
 
