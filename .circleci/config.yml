@@ -39,5 +39,5 @@ jobs:
       - checkout
       - run: npm install
       - run: npx sequelize-cli db:create
-      - run: npx sequelize db:migrate
+      - run: npx sequelize-cli db:migrate
       - run: npm run test
