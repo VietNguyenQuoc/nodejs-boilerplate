@@ -219,3 +219,59 @@
   level: 'error',
   timestamp: '2020-06-12T08:23:15.690Z'
 }
+{
+  message: 'Error: Email has already exists.\n' +
+    '    at Object.signUp (/Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authenticationService/index.js:15:23)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n' +
+    '    at /Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authentication.Controllers.js:17:5',
+  level: 'error',
+  timestamp: '2020-06-12T09:03:10.797Z'
+}
+{
+  message: 'Error: Email has already exists.\n' +
+    '    at Object.signUp (/Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authenticationService/index.js:15:23)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n' +
+    '    at /Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authentication.Controllers.js:17:5',
+  level: 'error',
+  timestamp: '2020-06-12T09:03:10.963Z'
+}
+{
+  message: 'Error: Email has already exists.\n' +
+    '    at Object.signUp (/Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authenticationService/index.js:15:23)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n' +
+    '    at /Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authentication.Controllers.js:17:5',
+  level: 'error',
+  timestamp: '2020-06-12T09:03:10.975Z'
+}
+{
+  message: 'Error: Email has already exists.\n' +
+    '    at Object.signUp (/Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authenticationService/index.js:15:23)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n' +
+    '    at /Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authentication.Controllers.js:17:5',
+  level: 'error',
+  timestamp: '2020-06-12T09:04:00.885Z'
+}
+{
+  message: 'Error: Email has already exists.\n' +
+    '    at Object.signUp (/Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authenticationService/index.js:15:23)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n' +
+    '    at /Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authentication.Controllers.js:17:5',
+  level: 'error',
+  timestamp: '2020-06-12T09:04:01.057Z'
+}
+{
+  message: 'Error: Email has already exists.\n' +
+    '    at Object.signUp (/Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authenticationService/index.js:15:23)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n' +
+    '    at /Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authentication.Controllers.js:17:5',
+  level: 'error',
+  timestamp: '2020-06-12T09:04:20.625Z'
+}
+{
+  message: 'Error: Email has already exists.\n' +
+    '    at Object.signUp (/Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authenticationService/index.js:15:23)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n' +
+    '    at /Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authentication.Controllers.js:17:5',
+  level: 'error',
+  timestamp: '2020-06-12T09:04:20.818Z'
+}
