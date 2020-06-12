@@ -8,7 +8,9 @@ describe('controller.authentication', () => {
 
   beforeEach(async () => {
     // await sequelize.query('SET FOREIGN_KEY_CHECKS = 0');
-    await Promise.all([truncateUsers(), truncateUserCredentials()]);
+    // await Promise.all([truncateUsers(), truncateUserCredentials()]);
+    await truncateUserCredentials();
+    await truncateUsers();
     // await sequelize.query('SET FOREIGN_KEY_CHECKS = 1');
   });
 

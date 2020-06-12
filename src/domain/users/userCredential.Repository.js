@@ -15,7 +15,7 @@ const findOrCreateUserCredential = async ({ externalId, defaultValues: { userId,
 }
 
 const truncateUserCredentials = async () => {
-  // await sequelize.query('SET FOREIGN_KEY_CHECKS = 0');
+  await sequelize.query('SET FOREIGN_KEY_CHECKS = 0');
   await UserCredential.truncate();
 }
 
