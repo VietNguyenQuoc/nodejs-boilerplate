@@ -7,7 +7,7 @@ const { sequelize } = require('../../src/infra/db/sequelize/models');
 describe('controller.authentication', () => {
 
   beforeEach(async () => {
-    // await sequelize.query('SET FOREIGN_KEY_CHECKS = 0');
+    await sequelize.query('SET GLOBAL FOREIGN_KEY_CHECKS = 1');
     await Promise.all([truncateUsers(), truncateUserCredentials()]);
     // await sequelize.query('SET FOREIGN_KEY_CHECKS = 1');
   });
