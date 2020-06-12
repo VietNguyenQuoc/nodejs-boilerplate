@@ -1,8 +1,8 @@
 const request = require('supertest');
-const { truncateUsers, createUser } = require('../../src/domain/users/user.Repository');
-const UserModel = require('../../src/domain/users/user.Model');
+const { truncateUsers } = require('../../src/domain/users/user.Repository');
 const { truncateUserCredentials } = require('../../src/domain/users/userCredential.Repository');
 const server = require('../../src/server');
+const { sequelize } = require('../../src/infra/db/sequelize/models');
 
 describe('controller.authentication.signUp', () => {
   beforeEach(async () => {
@@ -11,6 +11,7 @@ describe('controller.authentication.signUp', () => {
 
   afterAll(async () => {
     await server.close();
+    await sequelize.close();
   })
 
   it('should return status 400 when the email exists', async () => {
