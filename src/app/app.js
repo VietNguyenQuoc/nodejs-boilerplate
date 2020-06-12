@@ -17,7 +17,7 @@ const app = express();
 const httpLogFile = fs.createWriteStream(path.join(process.cwd(), 'http.log'));
 app.use(morgan('combined', { stream: httpLogFile }));
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
 
