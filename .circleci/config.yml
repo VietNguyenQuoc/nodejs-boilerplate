@@ -31,11 +31,13 @@ jobs:
             done
             echo Failed waiting for MySQL && exit 1
       - run: sudo npm install -g sequelize-cli
-      - run: npx sequelize-cli db:create
-      - run: npx sequelize db:migrate
   test:
+    environment:
+      NODE_ENV: test
     executor: node
     steps:
       - checkout
       - run: npm install
+      - run: npx sequelize-cli db:create
+      - run: npx sequelize db:migrate
       - run: npm run test
