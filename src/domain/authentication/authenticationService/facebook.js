@@ -1,7 +1,7 @@
 const url = require('url');
 const redirectUrl = url.resolve(process.env.SERVER_URL, '/auth/facebook/callback');
 const axios = require('axios');
-const userService = require('../../users/userService');
+const userService = require('../../users/user.Service');
 
 const getRedirectUrl = () => {
   const scopes = "email";

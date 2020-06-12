@@ -1,7 +1,7 @@
-const userRepository = require('./userRepository');
-const userCredentialRepository = require('./userCredentialRepository');
+const userRepository = require('./user.Repository');
+const userCredentialRepository = require('./userCredential.Repository');
 
-const createUser = async ({ userDto }) => {
+const createUser = async userDto => {
   return await userRepository.createUser({ userDto });
 }
 
@@ -9,19 +9,19 @@ const getUsers = async () => {
   return await userRepository.getUsers();
 }
 
-const getUserById = async ({ userId }) => {
+const getUserById = async userId => {
   return await userRepository.getUserById({ userId });
 }
 
-const getUserByEmail = async ({ email }) => {
+const getUserByEmail = async email => {
   return await userRepository.getUserByEmail({ email });
 }
 
-const updateUser = async ({ userDto }) => {
+const updateUser = async userDto => {
   return await userRepository.updateUser({ userDto });
 }
 
-const deleteUser = async ({ userId }) => {
+const deleteUser = async userId => {
   return await userRepository.deleteUser({ userId });
 }
 

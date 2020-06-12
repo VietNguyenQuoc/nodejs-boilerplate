@@ -9,6 +9,8 @@ const WError = require('verror').WError;
 const path = require('path');
 const routes = require('./routes');
 
+process.env.JWT_PRIVATE_KEY = fs.readFileSync(path.resolve('private.key'), 'utf8');
+process.env.JWT_PUBLIC_KEY = fs.readFileSync(path.resolve('public.key'), 'utf8');
 
 const app = express();
 

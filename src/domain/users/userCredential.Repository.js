@@ -1,6 +1,6 @@
 const { UserCredential } = require('../../infra/db/sequelize/models');
 
-const createUserCredential = async ({ userCredentialDto }) => {
+const createUserCredential = async userCredentialDto => {
   return await UserCredential.create(userCredentialDto);
 }
 
@@ -14,7 +14,12 @@ const findOrCreateUserCredential = async ({ externalId, defaultValues: { userId,
   });
 }
 
+const truncateUserCredentials = async () => {
+  await UserCredential.truncate();
+}
+
 module.exports = {
   createUserCredential,
-  findOrCreateUserCredential
+  findOrCreateUserCredential,
+  truncateUserCredentials
 }

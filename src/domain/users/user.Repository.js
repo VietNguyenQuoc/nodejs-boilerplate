@@ -1,36 +1,37 @@
-const { User, UserCredential } = require('../../infra/db/sequelize/models');
+const { sequelize, User, UserCredential } = require('../../infra/db/sequelize/models');
 
-const createUser = async ({ userDto }) => {
-  const user = await User.create(userDto);
-  return user;
+const createUser = async userDto => {
+  return await User.create(userDto);
 }
 
 const getUsers = async () => {
-  const users = await User.findAll();
-  return users;
+  return await User.findAll();
 }
 
-const getUserById = async ({ userId }) => {
-  const user = await User.findByPk(userId);
-  return user;
+const getUserById = async userId => {
+  return await User.findByPk(userId);
 }
 
-const getUserByEmail = async ({ email }) => {
-  const user = await User.findOne({
+const getUserByEmail = async email => {
+  return await User.findOne({
     where: { email },
     include: UserCredential
   });
-  return user;
 }
 
-const updateUser = async ({ userDto }) => {
+const updateUser = async userDto => {
   await User.update(userDto, {
     where: { id: userDto.userId }
   });
 }
 
-const deleteUser = async ({ userId }) => {
+const deleteUser = async userId => {
   await User.delete({ where: { id: userId } });
+}
+
+const truncateUsers = async () => {
+  await sequelize.query('SET FOREIGN_KEY_CHECKS = 0');
+  await User.truncate();
 }
 
 const findOrCreateUser = async ({ email, defaultValues }) => {
@@ -51,5 +52,6 @@ module.exports = {
   getUserByEmail,
   updateUser,
   deleteUser,
+  truncateUsers,
   findOrCreateUser
 };
