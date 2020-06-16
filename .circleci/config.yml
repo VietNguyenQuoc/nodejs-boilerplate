@@ -31,4 +31,5 @@ jobs:
       - run: echo $SSH_HOST
       - run:
           name: 'Deploy over SSH'
-          command: ssh $SSH_USER:$SSH_HOST "/home/ubuntu/node-projects/nodejs-boilerplate/deploy.sh"
+          command: |
+            ssh $SSH_USER:$SSH_HOST "/home/ubuntu/node-projects/nodejs-boilerplate/deploy.sh"
