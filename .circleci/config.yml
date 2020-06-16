@@ -10,9 +10,10 @@ executors:
           MYSQL_USER: groot
 workflows:
   version: 2
-  build_and_test:
+  test-and-deploy:
     jobs:
       - test
+      - deploy
 jobs:
   test:
     environment:
@@ -23,3 +24,9 @@ jobs:
       - run: npm install
       - run: npx sequelize-cli db:migrate
       - run: npm run test
+  deploy:
+    executor: node
+    steps:
+      - run:
+          name: 'Deploy over SSH'
+          command: ssh $SSH_USER:$SSH_HOST "/home/ubuntu/node-projects/nodejs-boilerplate/deploy.sh"
