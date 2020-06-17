@@ -4,12 +4,7 @@
 image: node:latest
 
 services:
-  - mysql:8.0.19
   - redis:5.0.7
-
-variables:
-  MYSQL_DATABASE: node_boilerplate_test
-  MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
 
 # Pick zero or more services to be used on all builds.
 # Only needed when using a docker container to run your tests in.
@@ -17,8 +12,11 @@ variables:
 
 
 test:
+  image: mysql:8.0.19
   variables:
     NODE_ENV: test
+    MYSQL_DATABASE: node_boilerplate_test
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
   script:
     - npm install
     - npx sequelize-cli db:migrate
