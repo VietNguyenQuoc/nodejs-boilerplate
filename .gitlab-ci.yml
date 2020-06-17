@@ -3,6 +3,10 @@
 # https://hub.docker.com/r/library/node/tags/
 image: node:latest
 
+services:
+  - mysql:8.0.19
+  - redis:5.0.7
+
 # Pick zero or more services to be used on all builds.
 # Only needed when using a docker container to run your tests in.
 # Check out: http://docs.gitlab.com/ce/ci/docker/using_docker_images.html#what-is-a-service
@@ -10,8 +14,7 @@ image: node:latest
 
 deploy:
   script:
-    - pwd
-    - whoami
-    - git pull origin master
-    - pm2 reload ../ecosystem.config.js
+    - npm install
+    - npx sequelize-cli db:migrate
+    - npm run test
 
