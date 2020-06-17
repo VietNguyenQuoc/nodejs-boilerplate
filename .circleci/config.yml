@@ -27,8 +27,6 @@ jobs:
   deploy:
     executor: node
     steps:
-      - run: echo $SSH_USER
-      - run: echo $SSH_HOST
       - run:
           name: 'Deploy over SSH'
           command: |
