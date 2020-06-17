@@ -1,6 +1,0 @@
-::ffff:127.0.0.1 - - [12/Jun/2020:09:04:20 +0000] "POST /auth/signup HTTP/1.1" 200 20 "-" "node-superagent/3.8.3"
-::ffff:127.0.0.1 - - [12/Jun/2020:09:04:20 +0000] "POST /auth/signup HTTP/1.1" 400 25 "-" "node-superagent/3.8.3"
-::ffff:127.0.0.1 - - [12/Jun/2020:09:04:20 +0000] "POST /auth/signup HTTP/1.1" 200 20 "-" "node-superagent/3.8.3"
-::ffff:127.0.0.1 - - [12/Jun/2020:09:04:20 +0000] "POST /auth/signup HTTP/1.1" 400 25 "-" "node-superagent/3.8.3"
-::ffff:127.0.0.1 - - [12/Jun/2020:09:04:20 +0000] "POST /auth/login HTTP/1.1" 400 30 "-" "node-superagent/3.8.3"
-::ffff:127.0.0.1 - - [12/Jun/2020:09:04:20 +0000] "POST /auth/login HTTP/1.1" 400 30 "-" "node-superagent/3.8.3"
