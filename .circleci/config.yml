@@ -20,6 +20,7 @@ jobs:
   test:
     environment:
       NODE_ENV: test
+      DB_NAME: ${MYSQL_DATABASE}
     executor: node
     steps:
       - checkout
