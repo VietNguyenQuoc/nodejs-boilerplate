@@ -275,3 +275,29 @@
   level: 'error',
   timestamp: '2020-06-12T09:04:20.818Z'
 }
+{
+  message: 'Error: invalid expiresIn option for string payload\n' +
+    '    at Object.module.exports [as sign] (/Users/2359media/node-projects/nodejs-boilerplate/node_modules/jsonwebtoken/sign.js:128:22)\n' +
+    '    at generateToken (/Users/2359media/node-projects/nodejs-boilerplate/src/infra/utils/generateToken.js:4:21)\n' +
+    '    at Object.signUp (/Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authenticationService/index.js:23:23)\n' +
+    '    at async /Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authentication.Controllers.js:17:5',
+  level: 'error',
+  timestamp: '2020-06-26T10:19:46.679Z'
+}
+{
+  message: 'Error: Email has already exists.\n' +
+    '    at Object.signUp (/Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authenticationService/index.js:19:23)\n' +
+    '    at async /Users/2359media/node-projects/nodejs-boilerplate/src/domain/authentication/authentication.Controllers.js:17:5',
+  level: 'error',
+  timestamp: '2020-06-26T10:37:36.358Z'
+}
+{
+  message: 'email is not defined',
+  level: 'error',
+  timestamp: '2020-06-26T10:44:27.114Z'
+}
+{
+  message: 'jwt expired',
+  level: 'error',
+  timestamp: '2020-06-26T14:39:59.791Z'
+}

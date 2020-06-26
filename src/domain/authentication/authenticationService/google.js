@@ -32,7 +32,8 @@ const handleCallback = async req => {
     email: profile.email,
     defaultValues: {
       lastName: profile.family_name,
-      firstName: profile.given_name
+      firstName: profile.given_name,
+      confirm: true
     }
   });
 

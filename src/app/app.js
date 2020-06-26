@@ -14,8 +14,7 @@ process.env.JWT_PUBLIC_KEY = fs.readFileSync(path.resolve('public.key'), 'utf8')
 
 const app = express();
 
-const httpLogFile = fs.createWriteStream(path.join(process.cwd(), 'http.log'));
-app.use(morgan('combined', { stream: httpLogFile }));
+app.use(morgan('tiny'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

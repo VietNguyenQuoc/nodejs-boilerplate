@@ -12,16 +12,35 @@ const getUserById = async userId => {
   return await User.findByPk(userId);
 }
 
-const getUserByEmail = async email => {
+const getUserByEmail = async (email, options) => {
   return await User.findOne({
     where: { email },
-    include: UserCredential
+    ...options
   });
 }
 
-const updateUser = async userDto => {
+const getUserByEmailWithCredentials = async (email) => {
+  return await User.findOne({
+    where: { email },
+    include: UserCredential
+  })
+}
+
+const getUserByToken = async token => {
+  return await User.findOne({
+    where: { verifyToken: token },
+  });
+}
+
+const getUserByResetToken = async token => {
+  return await User.findOne({
+    where: { resetPasswordToken: token }
+  });
+}
+
+const updateUserByEmail = async (email, userDto) => {
   await User.update(userDto, {
-    where: { id: userDto.userId }
+    where: { email }
   });
 }
 
@@ -50,7 +69,10 @@ module.exports = {
   getUserById,
   getUsers,
   getUserByEmail,
-  updateUser,
+  getUserByEmailWithCredentials,
+  getUserByToken,
+  getUserByResetToken,
+  updateUserByEmail,
   deleteUser,
   truncateUsers,
   findOrCreateUser

@@ -19,8 +19,13 @@ const truncateUserCredentials = async () => {
   await UserCredential.truncate();
 }
 
+const updateUserCredentialPassword = async (UserId, password) => {
+  await UserCredential.update({ ExternalId: password }, { where: { UserId, ExternalType: 'password' } });
+}
+
 module.exports = {
   createUserCredential,
   findOrCreateUserCredential,
-  truncateUserCredentials
+  truncateUserCredentials,
+  updateUserCredentialPassword
 }
